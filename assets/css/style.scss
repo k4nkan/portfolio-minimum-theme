@@ -1,0 +1,321 @@
+---
+---
+
+:root {
+  color-scheme: light;
+  --background: #f6f6f3;
+  --surface: #ffffff;
+  --text: #191918;
+  --muted: #6c6c67;
+  --border: #deded8;
+  --soft: #ecece7;
+  --code: #f0f0ec;
+  --link: #20201e;
+  --radius: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 1rem;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--link);
+  text-decoration-color: #aaa9a2;
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  text-decoration-color: currentColor;
+}
+
+.site-header {
+  border-bottom: 1px solid var(--border);
+}
+
+.header-inner,
+.site-footer {
+  width: min(100% - 40px, 1040px);
+  margin-inline: auto;
+}
+
+.header-inner {
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.site-name,
+.github-link {
+  font-size: 0.875rem;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.github-link {
+  color: var(--muted);
+}
+
+.page-shell {
+  width: min(100% - 40px, 760px);
+  margin: 0 auto;
+  padding: 72px 0 96px;
+}
+
+.home .page-shell {
+  width: min(100% - 40px, 960px);
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-bottom: 44px;
+  color: var(--muted);
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  color: var(--text);
+}
+
+.prose > :first-child {
+  margin-top: 0;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  color: var(--text);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+}
+
+.prose h1 {
+  margin: 0 0 20px;
+  font-size: clamp(2.25rem, 6vw, 3.75rem);
+}
+
+.document .prose h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.prose h2 {
+  margin: 64px 0 18px;
+  font-size: 1.65rem;
+}
+
+.prose h3 {
+  margin: 40px 0 14px;
+  font-size: 1.25rem;
+}
+
+.prose h4 {
+  margin: 30px 0 10px;
+  font-size: 1rem;
+}
+
+.prose p,
+.prose ul,
+.prose ol,
+.prose blockquote,
+.prose pre,
+.prose table,
+.prose figure {
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.prose ul,
+.prose ol {
+  padding-left: 1.5rem;
+}
+
+.prose li + li {
+  margin-top: 0.35rem;
+}
+
+.prose img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 32px auto;
+  border-radius: 10px;
+}
+
+.prose blockquote {
+  margin-left: 0;
+  padding: 4px 0 4px 20px;
+  border-left: 3px solid var(--border);
+  color: var(--muted);
+}
+
+.prose blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+.prose code {
+  padding: 0.16em 0.38em;
+  border-radius: 5px;
+  background: var(--code);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.88em;
+}
+
+.prose pre {
+  overflow-x: auto;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #222220;
+  color: #f8f8f2;
+  line-height: 1.6;
+}
+
+.prose pre code {
+  padding: 0;
+  background: transparent;
+  color: inherit;
+}
+
+.prose table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+}
+
+.prose th,
+.prose td {
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.prose th {
+  background: var(--soft);
+  font-weight: 650;
+}
+
+.prose hr {
+  margin: 56px 0;
+  border: 0;
+  border-top: 1px solid var(--border);
+}
+
+/* The root README becomes a compact, scan-friendly directory. */
+.home .prose > h1 + p {
+  max-width: 660px;
+  margin-bottom: 64px;
+  color: var(--muted);
+  font-size: 1.125rem;
+}
+
+.home .prose > h2 {
+  margin: 0;
+  padding: 28px 0 10px;
+  border-top: 1px solid var(--border);
+  font-size: 1.35rem;
+}
+
+.home .prose > h2 a {
+  text-decoration: none;
+}
+
+.home .prose > h2 + blockquote {
+  margin: 0;
+  padding: 0 0 12px;
+  border: 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
+.home .prose > h2 + blockquote p {
+  margin-bottom: 5px;
+}
+
+.home .prose > h2 + blockquote + p {
+  margin-bottom: 28px;
+}
+
+.home .prose > h2 + blockquote + p > a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 4px 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  font-size: 0.84rem;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.home .prose > h2 + blockquote + p > a:hover {
+  border-color: #aaa9a2;
+}
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 24px;
+  padding-bottom: 32px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.site-footer a {
+  color: inherit;
+}
+
+@media (max-width: 640px) {
+  .header-inner,
+  .site-footer,
+  .page-shell,
+  .home .page-shell {
+    width: min(100% - 28px, 960px);
+  }
+
+  .page-shell {
+    padding: 52px 0 72px;
+  }
+
+  .back-link {
+    margin-bottom: 32px;
+  }
+
+  .prose h2 {
+    margin-top: 48px;
+  }
+
+  .home .prose > h1 + p {
+    margin-bottom: 44px;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
