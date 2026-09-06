@@ -7,7 +7,7 @@ A minimal Jekyll theme that turns Markdown into a readable portfolio index and p
 Create `_config.yml` in your GitHub Pages repository:
 
 ```yml
-remote_theme: k4nkan/portfolio-minimum-theme
+remote_theme: k4nkan/portfolio-minimum-theme@v0.1.0-alpha.1
 ```
 
 The theme automatically uses the index layout for the root page and the document layout for subpages. No page-specific configuration is required.
@@ -33,3 +33,7 @@ A short introduction.
 ## Development status
 
 This is an intentionally small first version focused on typography, index readability, responsive layout, and standard Markdown elements.
+
+## License
+
+MIT License
