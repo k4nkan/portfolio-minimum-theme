@@ -1,1 +1,1 @@
-# portfolio-minimum-thema
+# portfolio-minimum-theme
